@@ -1,0 +1,40 @@
+Q1.請描述自己安裝與執行ARM software development tool的過程
+我先裝了virtutal box，之後照著網路的教程安裝好了ubuntu，裝好後我在ubuntu解壓縮了老師給的壓縮檔，
+並且統合各種指令寫在一個文字檔中，然後在指令裡加入了-y，這樣我就不用一直按yes了，指令如下，
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y dist-upgrade
+sudo apt-get -y install
+sudo apt-get -y autoremove
+sudo apt-get -y install autoconf
+sudo apt-get -y install autogen
+sudo apt-get -y install texinfo
+sudo apt-get -y install zlib1g-dev
+sudo apt-get -y install tcl-dev
+sudo apt-get -y install tk-dev
+sudo apt-get -y install libgmp-dev
+sudo apt-get -y install libmpc-dev
+sudo apt-get -y install libmpfr-dev
+sudo apt-get -y install mesa-common-dev
+sudo apt-get -y install libjpeg-dev
+sudo apt-get -y install libtogl-dev
+sudo apt-get -y install python-dev
+sudo apt-get -y install flex
+sudo apt-get -y install bison
+sudo apt-get -y install itcl3
+sudo apt-get -y install itk3
+sudo apt-get -y install iwidgets4
+之後我用vim .bashrc去設定PARH，和arm-none-eabi-gcc...的快捷鍵如下，
+export PATH=$PATH:/home/hung/arm-new/bin
+alias agcc='arm-none-eabi-gcc'
+alias aas='arm-none-eabi-as'
+
+Q2.請說明hw1.o與hw1.exe的差別?
+hw1.exe: 324 KB
+hw1.o: 920 個位元組
+.o檔是根據原始檔案直接翻譯成該平台對應的機械碼檔案，.o檔無法直接執行, 要執行必須再經過一個連結的
+手續將目的檔與函式庫(通常會需要) 進行連結, 就可以產生所謂的可執行檔 (exe) ，
+
+Q3.sample_O0.o與sample_O3.o檔案大小的差別?
+sample_O0.o: 1016 個位元組
+sample_O3.o: 1020 個位元組
